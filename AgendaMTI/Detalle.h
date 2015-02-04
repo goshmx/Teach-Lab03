@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Detalle.h
 //  AgendaMTI
 //
-//  Created by TRON on 03/02/15.
+//  Created by TRON on 04/02/15.
 //  Copyright (c) 2015 TRON. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface Detalle : UIViewController
 
 @end
-
