@@ -41,6 +41,14 @@ UIAlertView *alert;
     NSString *estado  = self.inputEstado.text;
     NSString *youtube = self.inputYoutube.text;
     NSData *imageData = UIImagePNGRepresentation([self.inputFoto image]);
+    if((nombre.length == 0)||(estado == 0)||(youtube == 0)){
+        alert = [[UIAlertView alloc] initWithTitle:@"Faltan campos!"
+                                           message:@"Oops! Parece que no haz llenado todos los campos!"
+                                          delegate:self
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 - (IBAction)accionRegresar:(id)sender {
