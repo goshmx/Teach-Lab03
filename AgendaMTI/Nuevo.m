@@ -49,6 +49,11 @@ UIAlertView *alert;
                                  otherButtonTitles: nil];
         [alert show];
     }
+    else{
+        if([[DBManager getSharedInstance]insertaDB:nombre estado:estado youtube:youtube foto:imageData]){
+            [self performSegueWithIdentifier:@"sagaNuevoHome" sender:self];
+        }
+    }
 }
 
 - (IBAction)accionRegresar:(id)sender {
