@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
 
-@interface Nuevo : UIViewController
+@interface Nuevo : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate>
+
+//Fields
+@property (strong, nonatomic) IBOutlet UITextField *inputNombre;
+@property (strong, nonatomic) IBOutlet UITextField *inputEstado;
+@property (strong, nonatomic) IBOutlet UITextField *inputYoutube;
+
+//ImageView
+@property (strong, nonatomic) IBOutlet UIImageView *inputFoto;
+
+//Acciones
+- (IBAction)accionGuardar:(id)sender;
+- (IBAction)accionRegresar:(id)sender;
+- (IBAction)accionFoto:(id)sender;
+
+
+
 
 @end

@@ -10,4 +10,14 @@
 
 @interface Listado : UIViewController
 
+//TableView
+@property (strong, nonatomic) IBOutlet UITableView *tableDatos;
+
+//Acciones
+- (IBAction)accionRegresar:(id)sender;
+- (IBAction)accionEditar:(id)sender;
+- (IBAction)accionEliminar:(id)sender;
+
+
+
 @end

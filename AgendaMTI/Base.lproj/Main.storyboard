@@ -23,6 +23,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionNuevo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ho9-fB-7oE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAV-Y4-KLz">
                                 <rect key="frame" x="77" y="361" width="167" height="51"/>
@@ -31,6 +34,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionEditar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yfi-IG-kDn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIf-Xt-fe3">
                                 <rect key="frame" x="77" y="429" width="167" height="47"/>
@@ -39,6 +45,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionBorrar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9GC-g8-uLd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHv-FV-ht2">
                                 <rect key="frame" x="77" y="496" width="167" height="52"/>
@@ -47,6 +56,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionListado:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="abr-rp-iAN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz6-GM-H9q">
                                 <rect key="frame" x="93" y="111" width="135" height="47"/>
@@ -58,9 +70,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="zYV-gh-OH3" kind="modal" identifier="sagaHomeNuevo" id="QZV-Sa-8Gq"/>
+                        <segue destination="g7S-Ua-u5v" kind="modal" identifier="sagaHomeListado" id="vJJ-kO-xbC"/>
+                        <segue destination="FNZ-zU-90X" kind="modal" identifier="sagaHomeDetalle" id="xpZ-05-UEx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="446" y="439"/>
         </scene>
         <!--Ver Mas-->
         <scene sceneID="xAj-Sd-Rqe">
@@ -85,6 +103,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionRegresar:" destination="9Wc-70-lI1" eventType="touchUpInside" id="gp5-hD-GEf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcN-uc-ZI5">
                                 <rect key="frame" x="88" y="471" width="144" height="21"/>
@@ -106,10 +127,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Foto" destination="I0t-UI-PcP" id="moa-pj-Nj1"/>
+                        <outlet property="Video" destination="Gd6-vv-Jct" id="8qW-Gn-1RM"/>
+                        <outlet property="labelEstado" destination="aT8-6b-G8h" id="Vyt-XJ-unh"/>
+                        <outlet property="labelNombre" destination="kcN-uc-ZI5" id="Ca3-Dn-6qf"/>
+                        <segue destination="FNZ-zU-90X" kind="modal" identifier="sagaVerMasDetalle" id="HmZ-eC-pu6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRo-4h-Uuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="1039"/>
+            <point key="canvasLocation" x="-52" y="273"/>
         </scene>
         <!--Listado-->
         <scene sceneID="2sX-4V-axO">
@@ -131,6 +159,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionRegresar:" destination="g7S-Ua-u5v" eventType="touchUpInside" id="sHP-ka-L0v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3T-mI-eR5">
                                 <rect key="frame" x="0.0" y="62" width="163" height="39"/>
@@ -139,6 +170,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionEditar:" destination="g7S-Ua-u5v" eventType="touchUpInside" id="Vnt-KX-7Eg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVT-97-D7t">
                                 <rect key="frame" x="164" y="62" width="156" height="39"/>
@@ -147,6 +181,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionEliminar:" destination="g7S-Ua-u5v" eventType="touchUpInside" id="LvP-cI-jqh"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3FS-mA-yzq">
                                 <rect key="frame" x="-8" y="101" width="328" height="467"/>
@@ -182,10 +219,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableDatos" destination="3FS-mA-yzq" id="RaI-na-jf8"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="sagaListadoHome" id="e6a-54-dSl"/>
+                        <segue destination="zYV-gh-OH3" kind="modal" identifier="sagaListadoNuevo" id="WMf-Af-PcJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFC-4N-lCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="-455"/>
+            <point key="canvasLocation" x="1147" y="329"/>
         </scene>
         <!--Detalle-->
         <scene sceneID="eTT-1p-TxM">
@@ -207,6 +249,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionRegresar:" destination="FNZ-zU-90X" eventType="touchUpInside" id="icf-nO-A9l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BQ-If-0La">
                                 <rect key="frame" x="0.0" y="59" width="154" height="43"/>
@@ -215,6 +260,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionVerMas:" destination="FNZ-zU-90X" eventType="touchUpInside" id="znw-mm-Lha"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-RE-EV9">
                                 <rect key="frame" x="157" y="59" width="163" height="43"/>
@@ -223,6 +271,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionCompartir:" destination="FNZ-zU-90X" eventType="touchUpInside" id="2eK-mz-vLd"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="G8V-2a-xqy">
                                 <rect key="frame" x="0.0" y="103" width="320" height="465"/>
@@ -258,6 +309,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableDatos" destination="G8V-2a-xqy" id="JUQ-LU-nGH"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="sagaDetalleHome" id="gjc-oi-xsv"/>
+                        <segue destination="9Wc-70-lI1" kind="modal" identifier="sagaDetalleVerMas" id="Ruz-h1-e4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ca3-yE-d7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,6 +353,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionGuardar:" destination="zYV-gh-OH3" eventType="touchUpInside" id="I9W-6q-nIO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLV-o1-LsM">
                                 <rect key="frame" x="8" y="20" width="60" height="30"/>
@@ -306,24 +365,45 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionRegresar:" destination="zYV-gh-OH3" eventType="touchUpInside" id="PQg-3J-P0v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aE-2d-eqk" userLabel="btnFoto">
                                 <rect key="frame" x="49" y="66" width="222" height="170"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="accionFoto:" destination="zYV-gh-OH3" eventType="touchUpInside" id="4yg-A4-3J1"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUf-e8-wrO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1423061899_camera-128.png" translatesAutoresizingMaskIntoConstraints="NO" id="eUf-e8-wrO">
                                 <rect key="frame" x="49" y="66" width="222" height="170"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="inputEstado" destination="cqv-9c-maT" id="W6Y-nn-WCm"/>
+                        <outlet property="inputFoto" destination="eUf-e8-wrO" id="J5n-Pa-F8Y"/>
+                        <outlet property="inputNombre" destination="7fL-qG-Dkw" id="dCC-WY-M1L"/>
+                        <outlet property="inputYoutube" destination="ISM-So-gEU" id="Hdo-f8-w4G"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="sagaNuevoHome" id="xWU-2y-6c8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yo7-2t-ULC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="346"/>
+            <point key="canvasLocation" x="959" y="-455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1423061899_camera-128.png" width="128" height="128"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xpZ-05-UEx"/>
+        <segue reference="xWU-2y-6c8"/>
+        <segue reference="QZV-Sa-8Gq"/>
+    </inferredMetricsTieBreakers>
 </document>

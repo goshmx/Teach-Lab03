@@ -18,6 +18,9 @@
 		8FA6A1761A81FB18009D0A0E /* Listado.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6A1751A81FB18009D0A0E /* Listado.m */; };
 		8FA6A1791A81FD28009D0A0E /* Detalle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6A1781A81FD28009D0A0E /* Detalle.m */; };
 		8FA6A17C1A82018C009D0A0E /* VerMas.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6A17B1A82018C009D0A0E /* VerMas.m */; };
+		8FA6A17F1A821737009D0A0E /* 1423061899_camera-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6A17E1A821737009D0A0E /* 1423061899_camera-128.png */; };
+		8FFA63A31A8334E90033C7E0 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA63A21A8334E90033C7E0 /* DBManager.m */; };
+		8FFA63A51A83352C0033C7E0 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,10 @@
 		8FA6A1781A81FD28009D0A0E /* Detalle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detalle.m; sourceTree = "<group>"; };
 		8FA6A17A1A82018C009D0A0E /* VerMas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerMas.h; sourceTree = "<group>"; };
 		8FA6A17B1A82018C009D0A0E /* VerMas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerMas.m; sourceTree = "<group>"; };
+		8FA6A17E1A821737009D0A0E /* 1423061899_camera-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1423061899_camera-128.png"; path = "../../../../Downloads/1423061899_camera-128.png"; sourceTree = "<group>"; };
+		8FFA63A11A8334E90033C7E0 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		8FFA63A21A8334E90033C7E0 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFA63A51A83352C0033C7E0 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +83,7 @@
 		8FA6A13F1A81ECBD009D0A0E = {
 			isa = PBXGroup;
 			children = (
+				8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */,
 				8FA6A14A1A81ECBD009D0A0E /* AgendaMTI */,
 				8FA6A1641A81ECBD009D0A0E /* AgendaMTITests */,
 				8FA6A1491A81ECBD009D0A0E /* Products */,
@@ -93,6 +102,7 @@
 		8FA6A14A1A81ECBD009D0A0E /* AgendaMTI */ = {
 			isa = PBXGroup;
 			children = (
+				8FA6A17D1A821710009D0A0E /* Imagenes */,
 				8FA6A14F1A81ECBD009D0A0E /* AppDelegate.h */,
 				8FA6A1501A81ECBD009D0A0E /* AppDelegate.m */,
 				8FA6A1521A81ECBD009D0A0E /* Home.h */,
@@ -109,6 +119,8 @@
 				8FA6A1781A81FD28009D0A0E /* Detalle.m */,
 				8FA6A17A1A82018C009D0A0E /* VerMas.h */,
 				8FA6A17B1A82018C009D0A0E /* VerMas.m */,
+				8FFA63A11A8334E90033C7E0 /* DBManager.h */,
+				8FFA63A21A8334E90033C7E0 /* DBManager.m */,
 			);
 			path = AgendaMTI;
 			sourceTree = "<group>";
@@ -137,6 +149,14 @@
 				8FA6A1661A81ECBD009D0A0E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FA6A17D1A821710009D0A0E /* Imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				8FA6A17E1A821737009D0A0E /* 1423061899_camera-128.png */,
+			);
+			name = Imagenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +242,7 @@
 				8FA6A1571A81ECBD009D0A0E /* Main.storyboard in Resources */,
 				8FA6A15C1A81ECBD009D0A0E /* LaunchScreen.xib in Resources */,
 				8FA6A1591A81ECBD009D0A0E /* Images.xcassets in Resources */,
+				8FA6A17F1A821737009D0A0E /* 1423061899_camera-128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +267,7 @@
 				8FA6A1761A81FB18009D0A0E /* Listado.m in Sources */,
 				8FA6A1731A81F78D009D0A0E /* Nuevo.m in Sources */,
 				8FA6A1791A81FD28009D0A0E /* Detalle.m in Sources */,
+				8FFA63A31A8334E90033C7E0 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +460,7 @@
 				8FA6A16D1A81ECBD009D0A0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FA6A16E1A81ECBD009D0A0E /* Build configuration list for PBXNativeTarget "AgendaMTITests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +469,7 @@
 				8FA6A1701A81ECBD009D0A0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

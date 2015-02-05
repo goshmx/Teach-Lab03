@@ -24,4 +24,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)accionNuevo:(id)sender {
+    [self performSegueWithIdentifier:@"sagaHomeNuevo" sender:self];
+}
+
+- (IBAction)accionEditar:(id)sender {
+    [self performSegueWithIdentifier:@"sagaHomeListado" sender:self];
+}
+
+- (IBAction)accionBorrar:(id)sender {
+    [self performSegueWithIdentifier:@"sagaHomeListado" sender:self];
+}
+
+- (IBAction)accionListado:(id)sender {
+    [self performSegueWithIdentifier:@"sagaHomeDetalle" sender:self];
+}
 @end

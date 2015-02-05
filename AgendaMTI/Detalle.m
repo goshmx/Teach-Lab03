@@ -34,4 +34,14 @@
 }
 */
 
+- (IBAction)accionRegresar:(id)sender {
+    [self performSegueWithIdentifier:@"sagaDetalleHome" sender:self];
+}
+
+- (IBAction)accionVerMas:(id)sender {
+    [self performSegueWithIdentifier:@"sagaDetalleVerMas" sender:self];
+}
+
+- (IBAction)accionCompartir:(id)sender {
+}
 @end

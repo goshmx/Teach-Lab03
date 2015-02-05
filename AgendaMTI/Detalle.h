@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface Detalle : UIViewController
+//TableView
+@property (strong, nonatomic) IBOutlet UITableView *tableDatos;
+
+//Acciones
+- (IBAction)accionRegresar:(id)sender;
+- (IBAction)accionVerMas:(id)sender;
+- (IBAction)accionCompartir:(id)sender;
+
 
 @end
