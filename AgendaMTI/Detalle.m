@@ -54,7 +54,23 @@ int indice = nil;
 
 - (IBAction)accionCompartir:(id)sender {
     if(idTemp != nil){
+        NSMutableArray *dato = datos[indice];
         
+        NSString                    *strMsg;
+        NSArray                     *activityItems;
+        UIImage                     *imgShare;
+        UIActivityViewController    *actVC;
+        
+        imgShare =  [UIImage imageWithData:[dato objectAtIndex:4]];
+        strMsg = [NSString stringWithFormat: @"Comparti un contacto, se llama %@ y su estado es: %@", [dato objectAtIndex:1], [dato objectAtIndex:2]];
+        
+        activityItems = @[imgShare, strMsg];
+        
+        //Init activity view controller
+        actVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        actVC.excludedActivityTypes = [NSArray arrayWithObjects:UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeAirDrop, nil];
+        
+        [self presentViewController:actVC animated:YES completion:nil];
     }
 }
 
