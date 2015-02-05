@@ -279,7 +279,7 @@
                                 <rect key="frame" x="0.0" y="103" width="320" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="FCn-n9-rS1">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgendaList" rowHeight="70" id="FCn-n9-rS1" customClass="AgendaList">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FCn-n9-rS1" id="hyW-gR-JmT">
@@ -302,8 +302,17 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foto" destination="l5O-KQ-dY4" id="Agb-TP-mWb"/>
+                                            <outlet property="labelEstado" destination="gtS-bZ-d47" id="33H-5a-FIb"/>
+                                            <outlet property="labelNombre" destination="CuB-TF-mzm" id="8zh-GS-ZoX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FNZ-zU-90X" id="bNz-q1-s1A"/>
+                                    <outlet property="delegate" destination="FNZ-zU-90X" id="5dQ-Ev-QLq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -403,7 +412,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xpZ-05-UEx"/>
-        <segue reference="xWU-2y-6c8"/>
+        <segue reference="gjc-oi-xsv"/>
         <segue reference="QZV-Sa-8Gq"/>
     </inferredMetricsTieBreakers>
 </document>

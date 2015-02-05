@@ -21,6 +21,7 @@
 		8FA6A17F1A821737009D0A0E /* 1423061899_camera-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6A17E1A821737009D0A0E /* 1423061899_camera-128.png */; };
 		8FFA63A31A8334E90033C7E0 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA63A21A8334E90033C7E0 /* DBManager.m */; };
 		8FFA63A51A83352C0033C7E0 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */; };
+		8FFA63A81A8340B70033C7E0 /* AgendaList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA63A71A8340B70033C7E0 /* AgendaList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		8FFA63A11A8334E90033C7E0 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		8FFA63A21A8334E90033C7E0 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		8FFA63A61A8340B70033C7E0 /* AgendaList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaList.h; sourceTree = "<group>"; };
+		8FFA63A71A8340B70033C7E0 /* AgendaList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				8FA6A17B1A82018C009D0A0E /* VerMas.m */,
 				8FFA63A11A8334E90033C7E0 /* DBManager.h */,
 				8FFA63A21A8334E90033C7E0 /* DBManager.m */,
+				8FFA63A61A8340B70033C7E0 /* AgendaList.h */,
+				8FFA63A71A8340B70033C7E0 /* AgendaList.m */,
 			);
 			path = AgendaMTI;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				8FA6A1541A81ECBD009D0A0E /* Home.m in Sources */,
 				8FA6A1511A81ECBD009D0A0E /* AppDelegate.m in Sources */,
 				8FA6A14E1A81ECBD009D0A0E /* main.m in Sources */,
+				8FFA63A81A8340B70033C7E0 /* AgendaList.m in Sources */,
 				8FA6A17C1A82018C009D0A0E /* VerMas.m in Sources */,
 				8FA6A1761A81FB18009D0A0E /* Listado.m in Sources */,
 				8FA6A1731A81F78D009D0A0E /* Nuevo.m in Sources */,
