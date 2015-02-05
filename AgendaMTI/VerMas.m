@@ -18,12 +18,14 @@ NSString *idTemp;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initController];
+
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+       // Dispose of any resources that can be recreated.
 }
 
 -(void) initController{
