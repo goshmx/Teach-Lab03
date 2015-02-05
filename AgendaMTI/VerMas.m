@@ -8,6 +8,8 @@
 
 #import "VerMas.h"
 
+NSString *idTemp;
+
 @interface VerMas ()
 
 @end
@@ -22,6 +24,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) initController{
+    NSMutableArray *dato = [[DBManager getSharedInstance]consultaDB:[NSString stringWithFormat: @"select agendaid, nombre, estado, youtube, foto FROM agenda WHERE agendaid=%@;", idTemp]];
+    self.labelNombre.text = [dato objectAtIndex:1];
+    self.labelEstado.text = [dato objectAtIndex:2];
+    self.Foto.image = [UIImage imageWithData:[dato objectAtIndex:4]];
+    NSURL *url = [NSURL URLWithString:[dato objectAtIndex:3]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.Video loadRequest:request];
 }
 
 /*
