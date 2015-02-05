@@ -8,6 +8,9 @@
 
 #import "Detalle.h"
 
+NSMutableArray *datos;
+NSString *idTemp;
+
 @interface Detalle ()
 
 @end
@@ -24,6 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)initController{
+    
+    datos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
+}
 /*
 #pragma mark - Navigation
 
