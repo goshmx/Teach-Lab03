@@ -314,11 +314,18 @@
                                     <outlet property="delegate" destination="FNZ-zU-90X" id="5dQ-Ev-QLq"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfa-SD-tN7" userLabel="Titulo">
+                                <rect key="frame" x="104" y="25" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="labelTitulo" destination="Wfa-SD-tN7" id="joA-1A-iU6"/>
                         <outlet property="tableDatos" destination="G8V-2a-xqy" id="JUQ-LU-nGH"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="sagaDetalleHome" id="gjc-oi-xsv"/>
                         <segue destination="9Wc-70-lI1" kind="modal" identifier="sagaDetalleVerMas" id="Ruz-h1-e4O"/>

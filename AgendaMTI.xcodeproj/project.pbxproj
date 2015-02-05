@@ -22,6 +22,9 @@
 		8FFA63A31A8334E90033C7E0 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA63A21A8334E90033C7E0 /* DBManager.m */; };
 		8FFA63A51A83352C0033C7E0 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */; };
 		8FFA63A81A8340B70033C7E0 /* AgendaList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA63A71A8340B70033C7E0 /* AgendaList.m */; };
+		8FFA63AA1A834CBB0033C7E0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA63A91A834CBB0033C7E0 /* Accounts.framework */; };
+		8FFA63AC1A834CC70033C7E0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA63AB1A834CC70033C7E0 /* Social.framework */; };
+		8FFA63AE1A834CD30033C7E0 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA63AD1A834CD30033C7E0 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		8FFA63A61A8340B70033C7E0 /* AgendaList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaList.h; sourceTree = "<group>"; };
 		8FFA63A71A8340B70033C7E0 /* AgendaList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaList.m; sourceTree = "<group>"; };
+		8FFA63A91A834CBB0033C7E0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		8FFA63AB1A834CC70033C7E0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8FFA63AD1A834CD30033C7E0 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFA63AE1A834CD30033C7E0 /* Twitter.framework in Frameworks */,
+				8FFA63AC1A834CC70033C7E0 /* Social.framework in Frameworks */,
+				8FFA63AA1A834CBB0033C7E0 /* Accounts.framework in Frameworks */,
 				8FFA63A51A83352C0033C7E0 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +95,9 @@
 		8FA6A13F1A81ECBD009D0A0E = {
 			isa = PBXGroup;
 			children = (
+				8FFA63AD1A834CD30033C7E0 /* Twitter.framework */,
+				8FFA63AB1A834CC70033C7E0 /* Social.framework */,
+				8FFA63A91A834CBB0033C7E0 /* Accounts.framework */,
 				8FFA63A41A83352C0033C7E0 /* libsqlite3.0.dylib */,
 				8FA6A14A1A81ECBD009D0A0E /* AgendaMTI */,
 				8FA6A1641A81ECBD009D0A0E /* AgendaMTITests */,

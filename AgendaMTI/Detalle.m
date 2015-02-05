@@ -10,7 +10,8 @@
 #import "AgendaList.h"
 
 NSMutableArray *datos;
-NSString *idTemp;
+NSString *idTemp =nil;
+int indice = nil;
 
 @interface Detalle ()
 
@@ -20,7 +21,8 @@ NSString *idTemp;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the
+    [self initController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +53,9 @@ NSString *idTemp;
 }
 
 - (IBAction)accionCompartir:(id)sender {
+    if(idTemp != nil){
+        
+    }
 }
 
 
@@ -100,6 +105,10 @@ NSString *idTemp;
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSMutableArray *dato = datos[indexPath.row];
+    indice = indexPath.row;
+    idTemp = [dato objectAtIndex:0];
+    self.labelTitulo.text = [dato objectAtIndex:1];
     
     
     
