@@ -49,7 +49,9 @@ int indice = nil;
 }
 
 - (IBAction)accionVerMas:(id)sender {
-    [self performSegueWithIdentifier:@"sagaDetalleVerMas" sender:self];
+    if(idTemp != nil){
+        [self performSegueWithIdentifier:@"sagaDetalleVerMas" sender:self];
+    }
 }
 
 - (IBAction)accionCompartir:(id)sender {
