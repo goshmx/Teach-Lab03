@@ -34,6 +34,7 @@ int ListadoIndice;
 - (void)initController{
     
     ListadoDatos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
+    //NSLog(@"%@", ListadoDatos);
 }
 
 /*
@@ -80,10 +81,12 @@ int ListadoIndice;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ListadoList";
+    static NSString *CellIdentifier = @"DetalleList";
     AgendaList *cell = (AgendaList *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if (cell == nil){
         cell = [[AgendaList alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+       
     }
     
     NSMutableArray *dato = ListadoDatos[indexPath.row];
