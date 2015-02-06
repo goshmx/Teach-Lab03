@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DBManager.h"
 
-@interface Listado : UIViewController
+@interface Listado : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 //TableView
 @property (strong, nonatomic) IBOutlet UITableView *tableDatos;

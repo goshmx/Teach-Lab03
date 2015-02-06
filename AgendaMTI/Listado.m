@@ -7,10 +7,11 @@
 //
 
 #import "Listado.h"
+#import "AgendaList.h"
 
-NSMutableArray *datos;
-NSString *idTemp =nil;
-int indice = nil;
+NSMutableArray *ListadoDatos;
+int ListadoIndice;
+
 
 @interface Listado ()
 
@@ -20,6 +21,8 @@ int indice = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initController];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -30,7 +33,7 @@ int indice = nil;
 
 - (void)initController{
     
-    datos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
+    ListadoDatos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
 }
 
 /*
@@ -53,4 +56,58 @@ int indice = nil;
 
 - (IBAction)accionEliminar:(id)sender {
 }
+
+
+
+/**********************************************************************************************
+ Table Functions
+ **********************************************************************************************/
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+//-------------------------------------------------------------------------------
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [ListadoDatos count];
+}
+//-------------------------------------------------------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 64;
+}
+//-------------------------------------------------------------------------------
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"ListadoList";
+    AgendaList *cell = (AgendaList *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil){
+        cell = [[AgendaList alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSMutableArray *dato = ListadoDatos[indexPath.row];
+    cell.labelNombre.text = [dato objectAtIndex:1];
+    cell.labelEstado.text = [dato objectAtIndex:2];
+    cell.foto.image = [UIImage imageWithData:[dato objectAtIndex:4]];
+    CALayer * l = [cell.foto layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius:30.0];
+    return cell;
+}
+
+
+//-------------------------------------------------------------------------------
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSMutableArray *dato = ListadoDatos[indexPath.row];
+    ListadoIndice = indexPath.row;
+    idTemp = [dato objectAtIndex:0];
+    self.labelTitulo.text = [dato objectAtIndex:1];
+    
+    
+    
+}
+
+
 @end
