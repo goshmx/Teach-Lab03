@@ -20,6 +20,12 @@ UIAlertView *alert;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     if(idTemp != nil){
+        
+        self.buttonRegresarListado.hidden =NO;
+        self.buttonRegresar.hidden = YES;
+        self.buttonGuardar.hidden = YES;
+        self.accionActualizar.hidden = NO;
+        
         NSMutableArray *dato;
         dato = [[DBManager getSharedInstance]consultaDB:[NSString stringWithFormat: @"select agendaid, nombre, estado, youtube, foto FROM agenda WHERE agendaid=%@;", idTemp]];
         self.inputNombre.text = [dato objectAtIndex:1];
@@ -99,7 +105,6 @@ UIAlertView *alert;
             [self performSegueWithIdentifier:@"sagaNuevoHome" sender:self];
         }
     }
-    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
