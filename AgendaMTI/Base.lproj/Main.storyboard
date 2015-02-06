@@ -425,15 +425,15 @@
                                     <action selector="accionRegresarListado:" destination="zYV-gh-OH3" eventType="touchUpInside" id="F6r-U2-KPl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ns6-xz-FGE">
-                                <rect key="frame" x="70" y="514" width="191" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlO-K1-M0f">
+                                <rect key="frame" x="70" y="518" width="191" height="42"/>
                                 <color key="backgroundColor" red="0.42745098039215684" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Actualizar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="accionActualizar:" destination="zYV-gh-OH3" eventType="touchUpInside" id="0vb-vh-EM0"/>
+                                    <action selector="accionActualizar:" destination="zYV-gh-OH3" eventType="touchUpInside" id="Ea0-6D-4IO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -441,12 +441,16 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="accionRegresarListado" destination="iKd-u3-Lfm" id="qCt-Gu-CAi"/>
+                        <outlet property="accionActualizar" destination="xlO-K1-M0f" id="iMC-FI-Fys"/>
+                        <outlet property="buttonGuardar" destination="HsQ-i8-dPc" id="2TU-Ah-H5y"/>
+                        <outlet property="buttonRegresar" destination="yLV-o1-LsM" id="xUw-kI-koV"/>
+                        <outlet property="buttonRegresarListado" destination="iKd-u3-Lfm" id="5nW-fw-dic"/>
                         <outlet property="inputEstado" destination="cqv-9c-maT" id="W6Y-nn-WCm"/>
                         <outlet property="inputFoto" destination="eUf-e8-wrO" id="J5n-Pa-F8Y"/>
                         <outlet property="inputNombre" destination="7fL-qG-Dkw" id="dCC-WY-M1L"/>
                         <outlet property="inputYoutube" destination="ISM-So-gEU" id="Hdo-f8-w4G"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="sagaNuevoHome" id="xWU-2y-6c8"/>
+                        <segue destination="g7S-Ua-u5v" kind="modal" identifier="sagaNuevoListado" id="q8z-5t-01U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yo7-2t-ULC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,7 +463,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xWU-2y-6c8"/>
-        <segue reference="QZV-Sa-8Gq"/>
+        <segue reference="WMf-Af-PcJ"/>
+        <segue reference="q8z-5t-01U"/>
         <segue reference="xpZ-05-UEx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -78,9 +78,28 @@ UIAlertView *alert;
 }
 
 - (IBAction)accionRegresarListado:(id)sender {
+    [self performSegueWithIdentifier:@"sagaNuevoListado" sender:self];
 }
 
 - (IBAction)accionActualizar:(id)sender {
+    NSString *nombre  = self.inputNombre.text;
+    NSString *estado  = self.inputEstado.text;
+    NSString *youtube = self.inputYoutube.text;
+    NSData *imageData = UIImagePNGRepresentation([self.inputFoto image]);
+    if((nombre.length == 0)||(estado == 0)||(youtube == 0)){
+        alert = [[UIAlertView alloc] initWithTitle:@"Faltan campos!"
+                                           message:@"Oops! Parece que no haz llenado todos los campos!"
+                                          delegate:self
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles: nil];
+        [alert show];
+    }
+    else{
+        if([[DBManager getSharedInstance]actualizaDB:nombre estado:estado youtube:youtube foto:imageData idagenda:idTemp]){
+            [self performSegueWithIdentifier:@"sagaNuevoHome" sender:self];
+        }
+    }
+    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -124,5 +143,6 @@ UIAlertView *alert;
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
+
 
 @end

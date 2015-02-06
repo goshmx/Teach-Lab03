@@ -16,6 +16,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *inputEstado;
 @property (strong, nonatomic) IBOutlet UITextField *inputYoutube;
 
+//buttons
+@property (strong, nonatomic) IBOutlet UIButton *buttonRegresarListado;
+@property (strong, nonatomic) IBOutlet UIButton *buttonGuardar;
+@property (strong, nonatomic) IBOutlet UIButton *buttonRegresar;
+@property (strong, nonatomic) IBOutlet UIButton *accionActualizar;
+
 //ImageView
 @property (strong, nonatomic) IBOutlet UIImageView *inputFoto;
 
