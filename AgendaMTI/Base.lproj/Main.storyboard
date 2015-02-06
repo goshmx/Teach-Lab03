@@ -219,10 +219,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="g7S-Ua-u5v" id="Ka3-xT-JO9"/>
-                                    <outlet property="delegate" destination="g7S-Ua-u5v" id="ybZ-Jm-izW"/>
-                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-B0-CaA" userLabel="Titulo">
                                 <rect key="frame" x="113" y="28" width="191" height="21"/>
