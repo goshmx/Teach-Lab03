@@ -56,6 +56,11 @@ int ListadoIndice;
 }
 
 - (IBAction)accionEliminar:(id)sender {
+    NSString *query = [NSString stringWithFormat: @"DELETE FROM agenda WHERE agendaid=%@;", idTemp];
+    if([[DBManager getSharedInstance]saveDB:query]){
+        [self initController];
+        self.tableDatos.reloadData;
+    }
 }
 
 
@@ -90,6 +95,7 @@ int ListadoIndice;
     }
     
     NSMutableArray *dato = ListadoDatos[indexPath.row];
+    NSLog(@"%@", dato);
     cell.labelNombre.text = [dato objectAtIndex:1];
     cell.labelEstado.text = [dato objectAtIndex:2];
     cell.foto.image = [UIImage imageWithData:[dato objectAtIndex:4]];
