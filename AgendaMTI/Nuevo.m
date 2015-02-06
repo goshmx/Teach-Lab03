@@ -19,6 +19,14 @@ UIAlertView *alert;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if(idTemp != nil){
+        NSMutableArray *dato;
+        dato = [[DBManager getSharedInstance]consultaDB:[NSString stringWithFormat: @"select agendaid, nombre, estado, youtube, foto FROM agenda WHERE agendaid=%@;", idTemp]];
+        self.inputNombre.text = [dato objectAtIndex:1];
+        self.inputEstado.text = [dato objectAtIndex:2];
+        self.inputYoutube.text = [dato objectAtIndex:3];
+        self.inputFoto.image = [UIImage imageWithData:[dato objectAtIndex:4]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +75,12 @@ UIAlertView *alert;
                              cancelButtonTitle:@"Cancelar"
                              otherButtonTitles:@"Camara", @"Carrete", nil];
     [alert show];
+}
+
+- (IBAction)accionRegresarListado:(id)sender {
+}
+
+- (IBAction)accionActualizar:(id)sender {
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

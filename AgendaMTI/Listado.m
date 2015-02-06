@@ -12,7 +12,6 @@
 NSMutableArray *ListadoDatos;
 int ListadoIndice;
 
-
 @interface Listado ()
 
 @end
@@ -21,6 +20,7 @@ int ListadoIndice;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    idTemp=nil;
     [self initController];
     
     // Do any additional setup after loading the view.
@@ -95,7 +95,7 @@ int ListadoIndice;
     }
     
     NSMutableArray *dato = ListadoDatos[indexPath.row];
-    NSLog(@"%@", dato);
+    
     cell.labelNombre.text = [dato objectAtIndex:1];
     cell.labelEstado.text = [dato objectAtIndex:2];
     cell.foto.image = [UIImage imageWithData:[dato objectAtIndex:4]];

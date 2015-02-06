@@ -23,6 +23,8 @@
 - (IBAction)accionGuardar:(id)sender;
 - (IBAction)accionRegresar:(id)sender;
 - (IBAction)accionFoto:(id)sender;
+- (IBAction)accionRegresarListado:(id)sender;
+- (IBAction)accionActualizar:(id)sender;
 
 
 

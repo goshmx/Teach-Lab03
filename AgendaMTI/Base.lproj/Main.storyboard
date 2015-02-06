@@ -219,6 +219,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="g7S-Ua-u5v" id="2ZS-zQ-xOe"/>
+                                    <outlet property="delegate" destination="g7S-Ua-u5v" id="cG3-Kf-w1s"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-B0-CaA" userLabel="Titulo">
                                 <rect key="frame" x="113" y="28" width="191" height="21"/>
@@ -409,11 +413,35 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1423061899_camera-128.png" translatesAutoresizingMaskIntoConstraints="NO" id="eUf-e8-wrO">
                                 <rect key="frame" x="49" y="66" width="222" height="170"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKd-u3-Lfm" userLabel="RegresarListado">
+                                <rect key="frame" x="8" y="58" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.44705882352941179" green="0.074509803921568626" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Regresar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="accionRegresarListado:" destination="zYV-gh-OH3" eventType="touchUpInside" id="F6r-U2-KPl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ns6-xz-FGE">
+                                <rect key="frame" x="70" y="514" width="191" height="50"/>
+                                <color key="backgroundColor" red="0.42745098039215684" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Actualizar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="accionActualizar:" destination="zYV-gh-OH3" eventType="touchUpInside" id="0vb-vh-EM0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="accionRegresarListado" destination="iKd-u3-Lfm" id="qCt-Gu-CAi"/>
                         <outlet property="inputEstado" destination="cqv-9c-maT" id="W6Y-nn-WCm"/>
                         <outlet property="inputFoto" destination="eUf-e8-wrO" id="J5n-Pa-F8Y"/>
                         <outlet property="inputNombre" destination="7fL-qG-Dkw" id="dCC-WY-M1L"/>
@@ -430,8 +458,8 @@
         <image name="1423061899_camera-128.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e6a-54-dSl"/>
-        <segue reference="WMf-Af-PcJ"/>
+        <segue reference="xWU-2y-6c8"/>
+        <segue reference="QZV-Sa-8Gq"/>
         <segue reference="xpZ-05-UEx"/>
     </inferredMetricsTieBreakers>
 </document>
