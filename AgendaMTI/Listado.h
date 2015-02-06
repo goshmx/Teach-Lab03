@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
 
 @interface Listado : UIViewController
 
 //TableView
 @property (strong, nonatomic) IBOutlet UITableView *tableDatos;
+@property (strong, nonatomic) IBOutlet UILabel *labelTitulo;
 
 //Acciones
 - (IBAction)accionRegresar:(id)sender;

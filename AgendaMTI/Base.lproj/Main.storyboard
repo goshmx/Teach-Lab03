@@ -215,11 +215,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-B0-CaA" userLabel="Titulo">
+                                <rect key="frame" x="113" y="28" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="labelTitulo" destination="ZvV-B0-CaA" id="2s5-L3-Auf"/>
                         <outlet property="tableDatos" destination="3FS-mA-yzq" id="RaI-na-jf8"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="sagaListadoHome" id="e6a-54-dSl"/>
                         <segue destination="zYV-gh-OH3" kind="modal" identifier="sagaListadoNuevo" id="WMf-Af-PcJ"/>
@@ -419,7 +426,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xpZ-05-UEx"/>
-        <segue reference="gjc-oi-xsv"/>
-        <segue reference="QZV-Sa-8Gq"/>
+        <segue reference="e6a-54-dSl"/>
+        <segue reference="WMf-Af-PcJ"/>
     </inferredMetricsTieBreakers>
 </document>

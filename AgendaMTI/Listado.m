@@ -8,6 +8,10 @@
 
 #import "Listado.h"
 
+NSMutableArray *datos;
+NSString *idTemp =nil;
+int indice = nil;
+
 @interface Listado ()
 
 @end
@@ -22,6 +26,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initController{
+    
+    datos = [[DBManager getSharedInstance]listDB:@"select agendaid, nombre, estado, youtube, foto from agenda"];
 }
 
 /*
